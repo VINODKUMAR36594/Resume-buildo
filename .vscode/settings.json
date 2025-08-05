@@ -1,0 +1,38 @@
+{
+    // Disable inline suggestions (GitHub Copilot, etc.)
+    "editor.inlineSuggest.enabled": false,
+    
+    // Disable IntelliSense suggestions
+    "editor.suggest.enabled": false,
+    "editor.quickSuggestions": {
+        "other": false,
+        "comments": false,
+        "strings": false
+    },
+    
+    // Disable parameter hints
+    "editor.parameterHints.enabled": false,
+    
+    // Disable suggestion on trigger characters
+    "editor.suggestOnTriggerCharacters": false,
+    
+    // Disable word based suggestions
+    "editor.wordBasedSuggestions": false,
+    
+    // Disable GitHub Copilot specifically
+    "github.copilot.enable": {
+        "*": false,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "javascript": false,
+        "typescript": false,
+        "javascriptreact": false,
+        "typescriptreact": false
+    },
+    
+    // Disable other suggestion features
+    "editor.acceptSuggestionOnCommitCharacter": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "editor.suggest.snippetsPreventQuickSuggestions": false
+}

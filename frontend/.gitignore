@@ -1,5 +1,34 @@
-# Logs
-logs
+# ⚙️ Dependency folders
+node_modules/
+**/node_modules/
+
+# 🏗️ Build output
+build/
+dist/
+out/
+.temp/
+.cache/
+.next/
+
+# 🧵 Tailwind CSS
+tailwind.config.js
+tailwind.config.cjs
+tailwind.config.ts
+tailwind.config.mjs
+.postcssrc.js
+.postcssrc.cjs
+.postcssrc.ts
+.postcssrc.mjs
+
+# 🔐 Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# 🪵 Logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -7,18 +36,40 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# 🧪 Test coverage
+coverage/
+*.lcov
 
-# Editor directories and files
-.vscode/*
+# 🧠 IDE/editor settings
+.vscode/
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# 🍏 macOS system files
+.DS_Store
+
+# 🪟 Windows system files
+Thumbs.db
+
+# 📦 Package manager artifacts
+*.tgz
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# 🧹 Misc
+*.local
+*.cache
+*.tmp
+*.bak
+*.orig
+*.env.*
+s
+# 🧪 ESLint & Prettier
+.eslintcache
+.prettierignore

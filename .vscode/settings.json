@@ -1,38 +1,68 @@
 {
-    // Disable inline suggestions (GitHub Copilot, etc.)
-    "editor.inlineSuggest.enabled": false,
+    // Enable inline suggestions (GitHub Copilot, etc.)
+    "editor.inlineSuggest.enabled": true,
     
-    // Disable IntelliSense suggestions
-    "editor.suggest.enabled": false,
+    // Enable IntelliSense suggestions
+    "editor.suggest.enabled": true,
     "editor.quickSuggestions": {
-        "other": false,
-        "comments": false,
-        "strings": false
+        "other": true,
+        "comments": true,
+        "strings": true
     },
     
-    // Disable parameter hints
-    "editor.parameterHints.enabled": false,
+    // Enable parameter hints
+    "editor.parameterHints.enabled": true,
     
-    // Disable suggestion on trigger characters
-    "editor.suggestOnTriggerCharacters": false,
+    // Enable suggestion on trigger characters
+    "editor.suggestOnTriggerCharacters": true,
     
-    // Disable word based suggestions
-    "editor.wordBasedSuggestions": false,
+    // Enable word based suggestions
+    "editor.wordBasedSuggestions": "matchingDocuments",
     
-    // Disable GitHub Copilot specifically
+    // Enable GitHub Copilot specifically
     "github.copilot.enable": {
-        "*": false,
-        "yaml": false,
-        "plaintext": false,
-        "markdown": false,
-        "javascript": false,
-        "typescript": false,
-        "javascriptreact": false,
-        "typescriptreact": false
+        "*": true,
+        "yaml": true,
+        "plaintext": true,
+        "markdown": true,
+        "javascript": true,
+        "typescript": true,
+        "javascriptreact": true,
+        "typescriptreact": true
     },
     
-    // Disable other suggestion features
-    "editor.acceptSuggestionOnCommitCharacter": false,
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.suggest.snippetsPreventQuickSuggestions": false
+    // Enable other suggestion features
+    "editor.acceptSuggestionOnCommitCharacter": true,
+    "editor.acceptSuggestionOnEnter": "on",
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    
+    // Enhanced JavaScript/TypeScript suggestions
+    "typescript.suggest.autoImports": true,
+    "javascript.suggest.autoImports": true,
+    "typescript.suggest.includeCompletionsForModuleExports": true,
+    "javascript.suggest.includeCompletionsForModuleExports": true,
+    
+    // Additional IntelliSense features
+    "editor.suggest.insertMode": "replace",
+    "editor.tabCompletion": "on",
+    "editor.suggest.localityBonus": true,
+    "editor.suggestSelection": "first",
+    
+    // Enable IntelliSense for package.json
+    "json.schemas": [],
+    
+    // Enable Emmet suggestions
+    "emmet.triggerExpansionOnTab": true,
+    "emmet.showSuggestionsAsSnippets": true,
+    
+    // CSS/SCSS suggestions
+    "css.enabled": true,
+    "scss.enabled": true,
+    
+    // Path suggestions
+    "path-intellisense.mappings": {
+        "@": "${workspaceFolder}/frontend/src",
+        "@components": "${workspaceFolder}/frontend/src/components",
+        "@utils": "${workspaceFolder}/frontend/src/utils"
+    }
 }

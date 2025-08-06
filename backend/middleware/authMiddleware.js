@@ -1,7 +1,6 @@
 import User from '../models/userModel.js'
-// filepath: c:\projects\ResumeBuilder\backend\middleware\authMiddleware.jsimport jwt from 'jsonwebtoken.js'
-import jwt from 'jsonwebtoken'
-
+// filepath: c:\projects\ResumeBuilder\backend\middleware\authMiddleware.jsimport jwt from 'jsonwebtoken'
+import jwt from 'jsonwebtoken';
 
 export const protect =async(req,res,next)=>{
     try {

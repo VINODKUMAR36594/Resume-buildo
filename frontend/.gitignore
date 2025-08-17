@@ -1,34 +1,5 @@
-# ⚙️ Dependency folders
-node_modules/
-**/node_modules/
-
-# 🏗️ Build output
-build/
-dist/
-out/
-.temp/
-.cache/
-.next/
-
-# 🧵 Tailwind CSS
-tailwind.config.js
-tailwind.config.cjs
-tailwind.config.ts
-tailwind.config.mjs
-.postcssrc.js
-.postcssrc.cjs
-.postcssrc.ts
-.postcssrc.mjs
-
-# 🔐 Environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# 🪵 Logs
-logs/
+# Logs
+logs
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -36,40 +7,30 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-# 🧪 Test coverage
-coverage/
-*.lcov
+node_modules
+dist
+dist-ssr
+*.local
 
-# 🧠 IDE/editor settings
-.vscode/
+# Editor directories and files
+.vscode/*
 !.vscode/extensions.json
-.idea/
+.idea
+.DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
 
-# 🍏 macOS system files
-.DS_Store
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# 🪟 Windows system files
-Thumbs.db
-
-# 📦 Package manager artifacts
+# Build outputs
+build/
+dist/
 *.tgz
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
-
-# 🧹 Misc
-*.local
-*.cache
-*.tmp
-*.bak
-*.orig
-*.env.*
-s
-# 🧪 ESLint & Prettier
-.eslintcache
-.prettierignore

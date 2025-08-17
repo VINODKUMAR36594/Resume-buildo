@@ -11,9 +11,19 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.11",
-    "react": "^19.1.0",
+    "axios": "^1.11.0",
+    "dayjs": "^1.11.13",
+    "lucide-react": "^0.539.0",
+    "moment": "^2.30.1",
+    "monet": "^0.9.3",
+    "react": "^19.1.1",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.11"
+    "react-hot-toast": "^2.6.0",
+    "react-moment": "^1.1.3",
+    "react-router-dom": "^7.8.0",
+    "react-toastify": "^11.0.5",
+    "tailwindcss": "^4.1.11",
+    "toastify": "^2.0.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

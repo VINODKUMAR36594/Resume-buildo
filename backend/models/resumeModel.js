@@ -1,87 +1,83 @@
 import mongoose from 'mongoose'
-const ResumeSchema =new mongoose.Schema({
-    userId:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'User',
-        required:true
+
+const ResumeSchema = new mongoose.Schema({
+    userId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
     },
-    title:{
-        type:String,
-        required:true
+    title: {
+        type: String,
+        required: true
     },
-    thumbnailsLink:{
-        type:String,
-        
+    thumbnailsLink: {
+        type: String,
     },
-    template:{
-        theme:String,
-        colorPalette:[String]
+    template: {
+        theme: String,
+        colorPalette: [String]
     },
-    profileInfo:{
+    profileInfo: {
         profilePreviewUrl: String,
-        fullName:String,
-        designation:String,
-        summary:String
+        fullName: String,
+        designation: String,
+        summary: String
     },
-    contactInfo:{
-        email:String,
-        phone:String,
-        location:String,
-        Linkedin:String,
-        gitHubLink:String,
-        webisteLink:String,
+    contactInfo: {
+        email: String,
+        phone: String,
+        location: String,
+        linkedin: String,
+        github: String,
+        website: String,
     },
-    //Work EXp
-    WorkExperience:[
+    workExperience: [
         {
-            company:String,
-            role:String,
-            startDate:String,
-            endDate:String,
-            description:String,
+            company: String,
+            role: String,
+            startDate: String,
+            endDate: String,
+            description: String,
         },
     ],
-    education :[
+    education: [
         {
-            degree:String,
-            institution:String,
-            startDate:String,
-            endDate:String,
+            degree: String,
+            institution: String,
+            startDate: String,
+            endDate: String,
         },
     ],
-    skills:[
+    skills: [
         {
-            name:String,
-            progress:Number,
+            name: String,
+            progress: Number,
+        },
+    ],
+    projects: [
+        {
+            title: String,
+            description: String,
+            github: String,
+            liveDemo: String,
+        },
+    ],
+    certifications: [
+        {
+            title: String,
+            issuer: String,
+            year: String,
+        },
+    ],
+    languages: [
+        {
+            name: String,
+            progress: Number,
+        },
+    ],
+    interests: [String],
+}, {
+    timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" }
+})
 
-        },
-    ],
-    projects:[
-        {
-            title:String,
-            description:String,
-            github:String,
-            liveDemo:String,
-        },
-    ],
-    certifications:[
-        {
-            title:String,
-            issuer:String,
-            year:String,
-        },
-    ],
-    languages:[
-        {
-            name:String,
-            progress:Number,
-        },
-    ],
-
-    intersets:[String],
-    
-},{
-    timestamps:{createdAt:"createAt",updatedAt:"updateAt"}
-}
-)
-export default mongoose.model("Resume",ResumeSchema)
+export default mongoose.model("Resume", ResumeSchema)

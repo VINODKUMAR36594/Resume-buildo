@@ -2,7 +2,7 @@ import React from 'react';
 import { modalStyles as styles } from '../assets/dummystyle';
 import {X} from 'lucide-react';
 
-const Modal = ({ children, isOpen, onClose, title, hideheader }) => {
+const Modal = ({ children, isOpen, onClose, title, hideheader ,showActionBtn,actionBtnTcon=null,actionBtnText,onActionClick=()=>{},}) => {
   if (!isOpen) return null; // Don't render if not open
 
   return (
@@ -11,6 +11,12 @@ const Modal = ({ children, isOpen, onClose, title, hideheader }) => {
         {!hideheader && (
           <div className={styles.header}>
             <h3 className={styles.title}>{title}</h3>
+            {showActionBtn && (
+              <button className={styles.actionButton} onClick={onActionClick}>
+                {actionBtnTcon}
+                {actionBtnText}
+              </button>
+            )}
           </div>
         )}
         <button type='button' className={styles.closeButton} onClick={onClose}>

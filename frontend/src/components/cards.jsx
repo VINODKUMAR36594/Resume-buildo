@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
-import { useContext } from "react";
-import { UserContext } from '../context/usercontext';
+import { useContext, useState } from "react";
+import { UserContext } from "../context/usercontext";
 import { cardStyles } from "../assets/dummystyle";
-import {useState} from "react";
+
+// Import all required icons from lucide-react
+import { Zap, Award, TrendingUp, Edit, Trash2, Clock } from "lucide-react";
+
 export const ProfileInfo = () => {
   const navigate = useNavigate();
   const { user, clearUser } = useContext(UserContext);
@@ -10,7 +13,7 @@ export const ProfileInfo = () => {
   const handleLogout = () => {
     localStorage.clear();
     clearUser();
-    navigate('/');
+    navigate("/");
   };
 
   const userName = user?.name ?? "Guest";
@@ -19,14 +22,10 @@ export const ProfileInfo = () => {
   return (
     <div className={cardStyles.profileCard}>
       <div className={cardStyles.profileInitialsContainer}>
-        <span className={cardStyles.profileInitalsText}>
-          {userInitial}
-        </span>
+        <span className={cardStyles.profileInitalsText}>{userInitial}</span>
       </div>
       <div>
-        <div className={cardStyles.profileName}>
-          {userName}
-        </div>
+        <div className={cardStyles.profileName}>{userName}</div>
         <button
           className={cardStyles.logoutButton}
           onClick={handleLogout}
@@ -37,8 +36,8 @@ export const ProfileInfo = () => {
     </div>
   );
 };
-//Resume Summary cardStyles
- // ResumeSummaryCard Component
+
+// ResumeSummaryCard Component
 export const ResumeSummaryCard = ({
   title = "Untitled Resume",
   createdAt = null,
@@ -51,18 +50,18 @@ export const ResumeSummaryCard = ({
 
   const formattedCreatedDate = createdAt
     ? new Date(createdAt).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    })
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      })
     : "—";
 
   const formattedUpdatedDate = updatedAt
     ? new Date(updatedAt).toLocaleDateString("en-US", {
-      month: "short",
-      day: "numeric",
-      year: "numeric",
-    })
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+      })
     : "—";
 
   const getCompletionColor = () => {
@@ -88,7 +87,7 @@ export const ResumeSummaryCard = ({
       "from-purple-50 to-purple-100",
       "from-emerald-50 to-emerald-100",
       "from-amber-50 to-amber-100",
-      "from-rose-50 to-rose-100"
+      "from-rose-50 to-rose-100",
     ];
     return colors[title.length % colors.length];
   };
@@ -104,15 +103,21 @@ export const ResumeSummaryCard = ({
     >
       {/* Completion indicator */}
       <div className={cardStyles.completionIndicator}>
-        <div className={`${cardStyles.completionDot} bg-gradient-to-r ${getCompletionColor()}`}>
+        <div
+          className={`${cardStyles.completionDot} bg-gradient-to-r ${getCompletionColor()}`}
+        >
           <div className={cardStyles.completionDotInner} />
         </div>
-        <span className={cardStyles.completionPercentageText}>{completion}%</span>
+        <span className={cardStyles.completionPercentageText}>
+          {completion}%
+        </span>
         {getCompletionIcon()}
       </div>
 
       {/* Preview area */}
-      <div className={`${cardStyles.previewArea} bg-gradient-to-br ${designColor}`}>
+      <div
+        className={`${cardStyles.previewArea} bg-gradient-to-br ${designColor}`}
+      >
         <div className="absolute inset-0 flex flex-col items-center justify-center">
           <div className={cardStyles.emptyPreviewIcon}>
             <Edit size={28} className="text-indigo-600" />
@@ -124,13 +129,14 @@ export const ResumeSummaryCard = ({
 
           {/* Mini resume sections indicator */}
           <div className="mt-4 flex gap-2">
-            {['Profile', 'Work', 'Skills', 'Edu'].map((section, i) => (
+            {["Profile", "Work", "Skills", "Edu"].map((section, i) => (
               <div
                 key={i}
-                className={`px-2 py-1 text-xs rounded-md ${i < Math.floor(completion / 25)
-                  ? 'bg-white/90 text-indigo-600 font-medium'
-                  : 'bg-white/50 text-gray-500'
-                  }`}
+                className={`px-2 py-1 text-xs rounded-md ${
+                  i < Math.floor(completion / 25)
+                    ? "bg-white/90 text-indigo-600 font-medium"
+                    : "bg-white/50 text-gray-500"
+                }`}
               >
                 {section}
               </div>
@@ -194,12 +200,20 @@ export const ResumeSummaryCard = ({
         {/* Completion status */}
         <div className="flex justify-between items-center mt-2">
           <span className="text-xs font-medium text-gray-500">
-            {completion < 50 ? "Getting Started" : completion < 80 ? "Almost There" : "Ready to Go!"}
+            {completion < 50
+              ? "Getting Started"
+              : completion < 80
+              ? "Almost There"
+              : "Ready to Go!"}
           </span>
-          <span className="text-xs font-bold text-gray-700">{completion}% Complete</span>
+          <span className="text-xs font-bold text-gray-700">
+            {completion}% Complete
+          </span>
         </div>
       </div>
     </div>
   );
 };
+
+// Export default and named components
 export default ProfileInfo;

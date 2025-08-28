@@ -21,7 +21,7 @@ export const CertificationInfo = ({ title, issuer, year, bgColor }) => (
   <div className={styles.certContainer}>
     <h3 className={styles.certTitle}>{title}</h3>
     <div className={styles.certRow}>
-      {year && <div className={styles.certYear(bgColor)} style={{ backgroundColor: bgColor }}>{year}</div>}
+      {year && <div className={styles.certYear} style={{ backgroundColor: bgColor }}>{year}</div>}
       <p className={styles.certIssuer}>{issuer}</p>
     </div>
   </div>
@@ -107,7 +107,7 @@ export const WorkExperience = ({ company, role, duration, durationColor, descrip
         <h3 className={styles.workCompany}>{company}</h3>
         <p className={styles.workRole}>{role}</p>
       </div>
-      <p className={styles.workDuration(durationColor)} style={{ color: durationColor }}>{duration}</p>
+      <p className={styles.workDuration} style={{ color: durationColor }}>{duration}</p>
     </div>
     <p className={styles.workDesc}>{description}</p>
   </div>

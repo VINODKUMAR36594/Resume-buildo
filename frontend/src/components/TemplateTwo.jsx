@@ -1,7 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { LuExternalLink, LuGithub } from "react-icons/lu";
+// import {  LuGithub } from "react-icons";
 import { formatYearMonth } from "../utils/helper";
+import { LuExternalLink,LuGithub } from "react-icons/lu";
 
 const sectionTitleClass = "text-base font-bold uppercase tracking-wide mb-1 pb-1 border-b border-gray-300";
 

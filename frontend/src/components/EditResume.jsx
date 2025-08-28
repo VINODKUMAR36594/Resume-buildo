@@ -11,7 +11,7 @@ import { fixTailwindColors } from '../utils/color';
 import html2pdf from 'html2pdf.js'
 import { dataURLtoFile } from '../utils/helper';
 import StepProgress from './StepProgress';
-import { ContactInfoForm, ProfileInfoForm, WorkExperienceForm } from './FORMS';
+import { AdditionalInfoForm, CertificationInfoForm, ContactInfoForm, EducationDetailsForm, ProfileInfoForm, ProjectDetailForm, SkillsInfoForm, WorkExperienceForm } from './FORMS';
 import RenderResume from './RenderResume';
 import ThemeSelector from './ThemeSelector';
 import Modal from './Modal';

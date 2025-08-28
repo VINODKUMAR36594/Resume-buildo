@@ -217,3 +217,40 @@ export const ResumeSummaryCard = ({
 
 // Export default and named components
 export default ProfileInfo;
+//Templaye cards 
+export const TemplateCard=({thumbnaiImg,isSelected,onSelect})=>{
+  return (
+    <div className={`group h-auto md:h-{300px} lg:h-{320px} flex flex-col bg-white border-2 overflow-hidden cursor-pointer transition-all duration-500 hover:scale-105 hover:shadow-lg rounded-3xl
+      ${
+      isSelected?"border-violte-500 shadow-lg shadow-violet-500/20 bg-violet-50":
+      "border-gray-200 hover:border-violet-200"
+      }`}
+      onClick={onSelect}>
+        {thumbnaiImg?(
+          <div className="relative w-full h-full overflow-hidden">
+            <img src={thumbnaiImg || '/placeholder.svg' } alt="template Review" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"/>
+            <div className="absoulte inset-0 bg-gradient-to-t from-white/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"/>
+            {isSelected && (
+              <div className="absoulte inset-0 bg-violet-500/10 flex items-cnetr justify-center">
+                <div  className="w-1 h-16 bg-white backdrop-blur-sm rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                  <Check size={24} className="text-violet-600"/>
+                </div>
+
+              </div>
+            )}
+            {/* hover effect */}
+            <div className="absolute inset-0 bg-gradient-to-t from-violet-100/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          </div>
+
+        ):(
+          <div className="w-full h-{200px} flex items-center flex-col justify-center bg-gradient-to-br from-violet-50 via-violet-600 to-fuchsia-50">
+            <div className="w-12 h-12 bg-gradient-to-br from-violet-500 to-fuchsia-500 rounded-2xl flex items-center justify-center mb-3
+             ">
+              <Edit className="text-white" size={20}/>
+             </div>
+
+          </div>
+        )}
+      </div>
+  )
+}

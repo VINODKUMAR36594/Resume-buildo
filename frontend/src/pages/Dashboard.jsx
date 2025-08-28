@@ -113,7 +113,7 @@ const Dashboard = () => {
     await fetchAllResumes();
   };
   getResumes();
-}, []);
+},[]); //to see all resumes
   const handleDeleteResume = async (resumeId) => {
     try {
 await axiosInstance.delete(API_PATHS.RESUME.DELETE(resumeId));//'/${resumeid}
